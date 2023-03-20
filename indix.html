@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+  body{
+    background: black;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .calc{
+    margin-top: 80%;
+    margin-left:22%;
+    
+  }
+  input{
+    text-align: right;
+   background: none;
+   outline: none;
+   border: none;
+   border-bottom: 0.5px solid gray;
+   width: 300px;
+   position: relative;
+   right: 55px;
+   font-size: 32px;
+   color: white;
+   animation-name: texte;
+  }
+  .content{
+    
+   display: grid;
+   grid-template-columns: repeat(4,50px);
+   grid-column-gap:40px;
+   grid-row-gap: 14px;
+ margin-top: 9px;
+ overflow: hidden;
+ margin-left: -58px;
+ 
+  }
+  button{
+    background: black;
+    color:white;
+    border: none;
+    font-size: 32px;
+    font-family: inherit;
+    height: 50px;
+  }
+  button:active{
+    background: url(37d2fbed99b930f71d11d964d21ead39.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  .change{
+    color: darkorange;
+  }
+  .equal{
+    background: darkorange;
+   border-radius: 50%;
+  }
+  .titel{
+    background: darkorange;
+    text-align: center;
+    height: 60px;
+  }
+  .titel h3{
+    color: floralwhite;
+   position: relative;
+   top: 13px;
+   letter-spacing: 4px;
+   font-size: 25px;
+  }
+</style>
+<body>
+  <div class="titel">
+    <h3>MD<span>-calculator</span></h3>
+  </div>
+<div class="calc">
+  <input type="text" placeholder="0" id="text">
+  <div class="content">
+   
+      <button class="change" onclick="Clear()">AC</button>
+       <button class="change" onclick="Delete()">Del</button>
+        <button class="change" onclick="display('.')"> .</button>
+         <button class="change" onclick="display('/')">/</button>
+   
+     
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button>
+        <button onclick="display('9')">9</button>
+        <button class="change" onclick="display('*')">×</button>
+      
+      <button onclick="display('4')">4</button>
+       <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+         <button class="change "onclick="display('-')">-</button>
+   
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button class="change" onclick="display('+')">+</button>
+   
+          <button onclick="display('(')">(</button>
+          <button onclick="display('0')">0</button>
+          <button onclick="display(')')">)</button>
+      <button class="equal" onclick="calc('=')">=</button>
+        </div>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>
